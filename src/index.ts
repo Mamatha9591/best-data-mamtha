@@ -34,13 +34,13 @@ const options: cors.CorsOptions = {
     logging: false
   })
   .then((connection) => {
-    app.use(express.static(__dirname + 'src\dist\dataconnection2\src\index.html'));
+    app.use(express.static(__dirname + 'src\dist/dataconnection2'));
     app.use(cors(options));
     app.use("/api/v1", authorized);
 
     app.get('/*', function(req,res) {
     
-      res.sendFile(path.join(__dirname));
+      res.sendFile(path.join(__dirname + 'src\dist\dataconnection2\src\index.html'));
   });
 
     const PORT = process.env.PORT || 3000;
