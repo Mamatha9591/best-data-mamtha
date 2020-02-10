@@ -3,7 +3,7 @@ import { createConnection } from "typeorm";
 import * as express from "express";
 import * as cors from "cors";
 import * as http from "http";
-const path = require('path');
+// const path = require('path');
 
 // import { paths } from "./paths";
 import authorized from "./routes/app-protected-routes";
@@ -34,14 +34,14 @@ const options: cors.CorsOptions = {
     logging: false
   })
   .then((connection) => {
-    app.use(express.static(__dirname + 'src\dist/dataconnection2'));
+    // app.use(express.static(__dirname + '/dist/dataconnection2'));
     app.use(cors(options));
     app.use("/api/v1", authorized);
 
-    app.get('/*', function(req,res) {
+  //   app.get('/*', function(req,res) {
     
-      res.sendFile(path.join(__dirname + 'src\dist\dataconnection2\src\index.html'));
-  });
+  //     res.sendFile(path.join(__dirname));
+  // });
 
     const PORT = process.env.PORT || 3000;
     http.createServer(app).listen(PORT);
