@@ -1,0 +1,67 @@
+<!-- <p>companyinfo works!</p> -->
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-6" id="pdg">
+                <div
+                    *ngFor="let Companydetails of filteredUsers | myfilter:searchByKeyword:'CompanyName':'Industry':'Location' | paginate: { itemsPerPage: 10, currentPage:p}">
+                    <div class="row" id="bg1">
+                        <div class="col-md-3 col-sm-3 col-xs-3">
+                            <img class="iset" src="assets\iCON100.png">
+                        </div>
+                        <div class="col-md-9 col-sm-6 col-xs-8">
+                            <h6 (click)="getCompanyByName(Companydetails.CompanyName)">
+                                {{Companydetails.CompanyName}}
+                            </h6>
+                            <p>{{Companydetails.Industry}}</p>
+                            <p>{{Companydetails.Location}}</p>
+                        </div>
+                    </div>
+                    <hr class="light">
+                    <!-- <app-contactus *ngFor="let Companydetails of data"></app-contactus> -->
+                </div>
+                <div class="col-md-8 col-sm-6 col-xs-6">
+                    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                </div>
+            </div>
+
+
+            <!-- About us -->
+            <!-- <hr class="light"> -->
+            <div class="col-md-4" id="about">
+                <h2 style="margin-left: 43px;">About Us</h2>
+                <p style="margin-left: 43px;">The Blog formed for the sole purpose to connect with business with
+                    target
+                    customers, we are database Provider Company, which includes high quality reliable, durable
+                    data for
+                    the
+                    helping businesses across the globe. <a routerLink="/about" style="margin-left:2px;">Read more</a></p>
+                <h3 style="margin-left: 43px;">Categories</h3>
+                <select class="category" style="margin-left: 43px;">
+                    <option value="volvo">Select Category</option>
+                    <option value="">Corporate Database</option>
+                    <option value="">Database</option>
+                    <option value="">Database for Business</option>
+                    <option value="">Email Marketing</option>
+                    <option value="">Lead generation</option>
+                    <option value="">Role of Database</option>
+
+                </select>
+                <br>
+                <br>
+                <h4 style="margin-left: 43px;">Connect Us</h4>
+                <div class="socialicon" style="margin-left: 43px;">
+                    <a href="https://www.facebook.com/Bestdataprovider1/" class="fa fa-facebook"></a>
+                    <a href="https://twitter.com/BDataprovider" class="fa fa-twitter"></a>
+                    <a href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQGLYIfEKpjpuwAAAW9A_Qt4fSV-D0YFzbxtjYGBPheQT0C_Bxx_zd0PWvODZEkYzxfYqwX36sRmxAz-K9yr2YwLTTLvQtgCYu6vdWXDSWGWJYGHhRZv5hUJDpOfad6ZcXiyrQY=&originalReferer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fbest-data-provider%2F"
+                        class="fa fa-linkedin"></a>
+                    <a href="https://www.instagram.com/bestdataprovider/" class="fa fa-instagram"></a>
+                    <a href="https://in.pinterest.com/BestDataProvider/" class="fa fa-pinterest"></a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <app-footer></app-footer>

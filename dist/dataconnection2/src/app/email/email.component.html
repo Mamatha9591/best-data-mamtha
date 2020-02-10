@@ -1,0 +1,42 @@
+<div class="container">
+	<div class="row">
+		<div class="col-sm-8">
+			<h3>Leave A Reply</h3>
+			<br>
+			<h6>Your email address will not be published. Required fields are marked *</h6>
+			<hr class="light">
+			<form [formGroup]="service.form">
+				<div class="form-group float-label-control">
+					<label for="">Comment</label>
+					<textarea class="form-control" placeholder="Textarea" rows="3" formControlName="Message"
+						[(ngModel)]="data.Comment"></textarea>
+				</div>
+				<div class="form-group float-label-control">
+					<label for="">Name*</label>
+					<input type="text" class="form-control" formControlName="UserName" required="required"
+						[(ngModel)]="data.Name">
+					<div style="color: red;" *ngIf="service.form.controls['UserName'].errors?.pattern">Not a valid
+						Name</div>
+				</div>
+				<div class="form-group float-label-control">
+					<label for="">Email*</label>
+					<input type="email" class="form-control" formControlName="email" required="required"
+						[(ngModel)]="data.Email">
+					<div style="color: red;" *ngIf="service.form.controls['email'].errors?.pattern">Only Business emails
+					</div>
+				</div>
+
+				<div class="form-group float-label-control">
+					<label for="">Website</label>
+					<input class="form-control" formControlName="Website" [(ngModel)]="data.Website">
+					<div style="color: red;" *ngIf="service.form.controls['Website'].errors?.pattern">Only Valid website
+					</div>
+				</div>
+				<div>
+					<button id="bl" type="button" class="btn btn-outline-primary" (click)="submitForm()">POST
+						COMMENT</button> <!--  //[disabled]="!service.valid" -->
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

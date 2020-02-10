@@ -1,0 +1,75 @@
+<p>socialreferral works!</p>
+<!-- <body>
+    <div class="container">
+      <div class="row">
+        <div>
+          <ul class="social-network social-circle">
+            <li><a href="#" class="icoInstagram" title="icoInstagram"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body> -->
+<!-- <share-buttons show="11"></share-buttons> 
+  <fa-icon [icon]="faCoffee"></fa-icon> -->
+
+<!-- <div class="container">
+    <div class="card">
+      <h2>Welcome <span *ngIf="loggedIn===true">{{user.firstName}} {{user.lastName}}, </span>to BestDataProvider</h2>
+      <button type="button" class="btn btn-primary" (click)="signInWithFB()" *ngIf="loggedIn===false">Sign In With Facebook</button>
+      <button type="button" class="btn btn-primary" (click)="signOut()" *ngIf="loggedIn===true">Sign Out From Facebook</button>
+      
+    </div>
+    <div class="card" *ngIf="loggedIn===true">
+      <div class="header">
+        <h2>Your Facebook Profile:</h2>
+        Full Name: {{user.firstName}} {{user.lastName}}
+      </div>
+      <app-home></app-home>
+
+    </div>
+  </div> -->
+<!-- <fb-like url="http://jasonwatmore.com"></fb-like>
+  <div class="app-socialreferral" [attr.data-href]="url" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div> -->
+
+<!-- <google-plus url1="http://jasonwatmore.com"></google-plus> -->
+<!-- <facebook-share-button  ></facebook-share-button> -->
+
+<!-- <div id="fb-root"></div> -->
+<!-- <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0"></script> -->
+
+
+
+
+<!-- Your share button code -->
+<!-- <div class="fb-share-button" data-href="https://bestdataprovider.com/company-info/" data-layout="button_count">
+</div> -->
+
+<!-- <tweet url="https://final-app11.herokuapp.com/"></tweet> -->
+
+<!-- <div ng-controller="myController" class="jumbotron text-center">
+  <div class="container">
+    <div fb-like></div>
+    <div class="col-xs-3">
+      <div fb-like="myModel.Url"></div>
+    </div>
+  </div>
+</div>
+<div class="credits text-center">
+  <p>
+    <a href="https://bestdataprovider.com/company-info/">AngularJS directives for social sharing buttons</a>
+  </p>
+  <p>
+    <a href="https://bestdataprovider.com/company-info/">Best Data Providers</a>
+  </p>
+</div> -->
+<facebook-login-button [style]="'round'" (socialUser)="getSocialUser($event)"></facebook-login-button>
+
+<!-- <facebook-share-button [share]="shareObj" ></facebook-share-button> -->
+
+
+<button (click)="facebookSharing(shareObj)"  class="btn btn-primary">Facebook Share</button>

@@ -1,0 +1,105 @@
+<app-nav></app-nav>
+<div class="hero-image">
+	<img src="assets\133.png" alt="" width="100%" height="200px">
+	<div class="hero-text iline">
+
+		<!-- <input type="text" class="search-fd" placeholder="Search this blog" [(ngModel)]="term">
+		<div class="input-group-append">
+			<button id="icon" class="btn btn-secondary" type="button">
+				<i class="fa fa-search"></i>
+			</button> -->
+	</div>
+</div>
+<br>
+<br>
+<br>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-8">
+			<h4>Update The Company Info</h4>
+			<hr class="light">
+			<form [formGroup]="service.form">
+				<div class="form-group float-label-control">
+					<label for="">Your Name*</label>
+					<input type="text" class="form-control" formControlName="UserName" required="required"
+						[(ngModel)]="inform.UserName">
+					<div style="color: red;" *ngIf="service.form.controls['UserName'].errors?.pattern">Not a valid
+						Name</div>
+				</div>
+				<div class="form-group float-label-control">
+					<label for="">Your Email*</label>
+					<input type="email" class="form-control" formControlName="UserEmail" required="required"
+						[(ngModel)]="inform.UserEmail">
+					<div style="color: red;" *ngIf="service.form.controls['UserEmail'].errors?.pattern">Not a valid
+						Email
+					</div>
+
+				</div>
+				<div class="form-group float-label-control">
+					<label for="">Your Mobile Number</label>
+					<input class="form-control" formControlName="MobileNumber" [(ngModel)]="inform.MobileNumber">
+					<div style="color: red;" *ngIf="service.form.controls['MobileNumber'].errors?.pattern">Not a
+						valid Mobile_Number</div>
+
+				</div>
+				<div class="form-group float-label-control">
+					<label for="">Subject</label>
+					<input type="text" class="form-control" formControlName="Subject" [(ngModel)]="inform.Subject">
+				</div>
+				<div class="form-group float-label-control label-bottom">
+					<label for="">Name of the Company to be edited in our Database</label>
+					<input type="text" class="form-control" formControlName="Name_Of_The_Company"
+						[(ngModel)]="inform.Name_Of_The_Company">
+				</div>
+				<div class="form-group float-label-control">
+					<label for="">Details to be Added (For Ex: Website, Mobile number, Email id)</label>
+					<textarea class="form-control" placeholder="Textarea" rows="4" formControlName="Details_To_Be_Added"
+						[(ngModel)]="inform.Details_To_Be_Added"></textarea>
+				</div>
+				<div>
+					<button id="filter" type="button" class="btn btnprop" (click)="submitForm()">Submit</button>
+					<button id="filter" type="button" class="btn btnprop0" (click)="backClicked()">Go
+						Back</button>
+				</div>
+			</form>
+		</div>
+		<br>
+
+		<!-- About -->
+		<div class="col-md-4">
+			<!-- <div class="card"> -->
+			<h4 style="margin-left: 16px">About Us</h4>
+			<p style="margin-left: 16px">The Blog formed for the sole purpose to connect with business with
+				target
+				customers, we are database Provider Company, which includes high quality reliable, durable data
+				for
+				the
+				helping businesses across the globe.<a style="margin-left: 2px" routerLink="/about">Read more</a>
+			</p>
+			<h4 style="margin-left: 16px">Categories</h4>
+			<select class="category" style="margin-left: 16px">
+				<option value="volvo">Select Category</option>
+				<option value="">Corporate Database</option>
+				<option value="">Database</option>
+				<option value="">Database for Business</option>
+				<option value="">Email Marketing</option>
+				<option value="">Lead generation</option>
+				<option value="">Role of Database</option>
+			</select>
+			<br>
+			<br>
+			<h4 style="margin-left: 16px">Connect Us</h4>
+			<div class="socialicon" style="margin-left: 16px">
+				<a href="https://www.facebook.com/Bestdataprovider1/" class="fa fa-facebook"></a>
+				<a href="https://twitter.com/BDataprovider" class="fa fa-twitter"></a>
+				<a href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQGLYIfEKpjpuwAAAW9A_Qt4fSV-D0YFzbxtjYGBPheQT0C_Bxx_zd0PWvODZEkYzxfYqwX36sRmxAz-K9yr2YwLTTLvQtgCYu6vdWXDSWGWJYGHhRZv5hUJDpOfad6ZcXiyrQY=&originalReferer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fbest-data-provider%2F"
+					class="fa fa-linkedin"></a>
+				<a href="https://www.instagram.com/bestdataprovider/" class="fa fa-instagram"></a>
+				<a href="https://in.pinterest.com/BestDataProvider/" class="fa fa-pinterest"></a>
+			</div>
+			<!-- </div> -->
+		</div>
+	</div>
+</div>
+<br><br>
+<app-footer></app-footer>
