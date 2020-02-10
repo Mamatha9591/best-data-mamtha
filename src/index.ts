@@ -34,7 +34,7 @@ const options: cors.CorsOptions = {
     app.use(cors(options));
     app.use("/api/v1", authorized);
 
-    const PORT = 3000;
+    const PORT = process.env.PORT || 3000;
     http.createServer(app).listen(PORT);
     console.log("database connected sucessfully");
     console.log("connected sucessfully on port 3000");
