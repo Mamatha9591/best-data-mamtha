@@ -34,7 +34,7 @@ const options: cors.CorsOptions = {
     logging: false
   })
   .then((connection) => {
-    app.use(express.static(__dirname + '/dist/dataconnection2/src/index.html'));
+    app.use(express.static(__dirname + '/dist/dataconnection2'));
     app.use(cors(options));
     app.use("/api/v1", authorized);
 
